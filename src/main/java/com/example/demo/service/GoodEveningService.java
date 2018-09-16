@@ -1,4 +1,4 @@
-package com.example.demo.domain;
+package com.example.demo.service;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -7,10 +7,10 @@ import com.example.demo.annotation.Evening;
 
 @Component(value = "evening")
 @Evening
-public class GoodEvening implements IGreet {
+public class GoodEveningService implements IGreetService {
 	private final String name;
 
-	public GoodEvening(@Value(value = "${greet.name:hoge}") String name) {
+	public GoodEveningService(@Value(value = "${greet.name:hoge}") String name) {
 		this.name = name;
 	}
 
